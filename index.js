@@ -22,6 +22,8 @@ app.use(bodyParser.json())
 // nyt jos tietokanta muuttuu, tai käyttäjät pitää rekisteröidä johonkin pilvipalveluun,
 // voidaan vain vaihtaa tiedosto, josta authService importataan, mutta minkään muun ei tarvitse muuttua
 
+// ############# // jos kovasti hiertää se, että servicet on requestin contextissa, voitte käyttää toista esimerkkiä authControllerissa (registerUser2Example) 
+
 const services = (req, res, next) => {
   req.services = {authService}
   next()

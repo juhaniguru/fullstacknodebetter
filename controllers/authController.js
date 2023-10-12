@@ -9,7 +9,7 @@ module.exports.registerUser = async (req, res) => {
         // nyt service voi olla mikä tahansa, koska se kiinnitetään indexissä requestiin
         // tämä koodi ei muutu ollenkaan riippumatta siitä, mihin tiedot tallennetaan.
 
-        // jos kovasti hiertää se, että servicet on requestin contextissa, voitte käyttää tuota alempaa esimerkki (registerUser2Example)
+        // jos kovasti hiertää se, että servicet on requestin contextissa, voitte käyttää tuota alempaa esimerkkiä (registerUser2Example)
 
         const account = await req.services.authService.register(body.username)
         res.json({account})
